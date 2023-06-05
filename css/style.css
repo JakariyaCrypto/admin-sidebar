@@ -1,0 +1,169 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI";
+    scroll-behavior: smooth;
+}
+
+aside{
+    width: 250px;
+    position: fixed;
+    left: 0;
+    top: 0;
+    /* left: -50px; */
+    height: 1000px;
+    padding: 10px;
+    background-color: #171f36;
+    color: white;
+    transition: .5s;
+}
+
+.logo{
+    position: relative;
+
+}
+
+.logo img {
+	width: 70px;
+	border-radius: 100px;
+	margin: auto;
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+    align-items: center;
+
+}
+
+.menu-icon{
+    position: absolute;
+    top: 0;
+    right: -50px;
+    width: 30px;
+    height: 30px;
+    border-radius: 30px;
+    font-size: 20px;
+    padding: 1px;
+    background-color: royalblue;
+    text-align: center;
+    cursor: pointer;
+}
+
+.bx-x {
+	display: block;
+	line-height: 28px;
+	font-weight: bold;
+}
+
+
+.logo a{
+    height: 100%;
+}
+
+.side-menu li {
+	list-style: none;
+	padding: 5px 5px;
+	margin: 10px auto;
+	border-radius: 10px;
+	text-transform: uppercase;
+	overflow: hidden;
+	transition: .5s;
+}
+
+
+
+li a{
+    position: relative;
+    height: 30px;
+}
+
+li a i{
+    margin-right: 20px;
+    width: 25px;
+    text-align: center;
+    font-size: 20px;
+}
+
+li a span {
+	width: 105px;
+	overflow: hidden;
+	height: 25px;
+	transition: .5s;
+	font-size: 15px;
+}
+
+.bxs-chevron-right{
+    position: absolute;
+    right: 0;
+    /* width: 0; */
+}
+
+.sub-menu li {
+	padding: 5px 10px;
+	margin: 4px 0;
+	font-size: 15px;
+	font-weight: 200;
+}
+
+
+section{
+    width: calc(100% - 300px);
+    margin-left: 280px;
+    transition: .5s;
+}
+
+ li.active{
+    background-color: royalblue !important;
+}
+
+.sub-menu {
+	width: 80%;
+	margin: 0 0 0 29px;
+    transition: .5s;
+    height: 0;
+}
+
+li.active .sub-menu{
+    height: 150px;
+    transition: .3s;
+}
+
+/* js clickable css */
+
+aside.expand{
+    width: 50px;
+    left: 0;
+}
+
+aside.expand ~ section {
+    width: calc(100% - 100px);
+	margin-left: 80px;
+    transition: .5s;
+}
+
+
+aside.expand li.active .sub-menu{
+    height: 0;
+    transform: .5s;
+}
+
+aside.expand .menu-icon>.bx-menu{
+    display: none;
+}
+
+aside.expand .menu-icon>.bx-x{
+    display: block;
+}
+
+aside.expand .bxs-chevron-right{
+    display: none;
+}
+
+aside.expand .logo img {
+    width: 40px;
+    transition: .3s;
+}
+
